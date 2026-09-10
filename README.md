@@ -899,5 +899,3 @@ The Option 3 testbed reached a validated multi-UPF state:
 The key implementation lesson is that UE1's chained forwarding is derived from its **topology** and does not require a `specificPath`. UE2 retains the explicit `specificPath: [UPF2]` rule. Adding a multi-UPF `specificPath` to UE1 caused the SMF to select one UPF and ignore the other rather than preserving the intended chain.
 
 ```
-
-The YAML configuration files and PCAP should be copied from the validated testbed so the repository remains a reproducible snapshot of the working configuration.
