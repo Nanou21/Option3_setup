@@ -42,8 +42,6 @@ Both N3 and N9 carry GTP-U over UDP port `2152`. The logical interface is determ
 
 ## Architecture
 
-![Option 3 architecture](images/option3_architecture.png)
-
 ### Main IP addressing
 
 | Function | Node / interface | IP address | Protocol / interface |
@@ -900,25 +898,6 @@ The Option 3 testbed reached a validated multi-UPF state:
 
 The key implementation lesson is that UE1's chained forwarding is derived from its **topology** and does not require a `specificPath`. UE2 retains the explicit `specificPath: [UPF2]` rule. Adding a multi-UPF `specificPath` to UE1 caused the SMF to select one UPF and ignore the other rather than preserving the intended chain.
 
-## Recommended repository contents
-
-```text
-free5gc-option3-n9/
-├── README.md
-├── images/
-│   ├── option3_architecture.png
-│   └── option3_namespaces.png
-├── configs/
-│   ├── smfcfg.ulcl1.yaml
-│   ├── uerouting.yaml
-│   ├── upfcfg01.yaml
-│   ├── upfcfg02.yaml
-│   ├── free5gc-gnb1.yaml
-│   ├── free5gc-gnb2.yaml
-│   ├── ue1.yaml
-│   └── ue2.yaml
-└── captures/
-    └── working-n9-test.pcap
 ```
 
 The YAML configuration files and PCAP should be copied from the validated testbed so the repository remains a reproducible snapshot of the working configuration.
