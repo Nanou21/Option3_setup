@@ -898,4 +898,20 @@ The Option 3 testbed reached a validated multi-UPF state:
 
 The key implementation lesson is that UE1's chained forwarding is derived from its **topology** and does not require a `specificPath`. UE2 retains the explicit `specificPath: [UPF2]` rule. Adding a multi-UPF `specificPath` to UE1 caused the SMF to select one UPF and ignore the other rather than preserving the intended chain.
 
-```
+option3-setup/
+├── multiupf/
+│   ├── smfcfg.ulcl1.yaml
+│   ├── uerouting.yaml
+│   ├── upfcfg01.yaml
+│   └── upfcfg02.yaml
+│
+├── ueransim/
+│    ├── free5gc-gnb1.yaml
+│    └── free5gc-ue.yaml
+│    ├── free5gc-gnb2.yaml
+│    └── free5gc-ue2.yaml
+│
+├── create_ns.sh
+├── start_services.sh
+├── kill5g.sh
+└── README.md
