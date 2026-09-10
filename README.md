@@ -906,10 +906,10 @@ option3-setup/
 │   └── upfcfg02.yaml
 │
 ├── ueransim/
-│    ├── free5gc-gnb1.yaml
-│    └── free5gc-ue.yaml
-│    ├── free5gc-gnb2.yaml
-│    └── free5gc-ue2.yaml
+│   ├── free5gc-gnb1.yaml
+│   ├── free5gc-ue.yaml
+│   ├── free5gc-gnb2.yaml
+│   └── free5gc-ue2.yaml
 │
 ├── create_ns.sh
 ├── start_services.sh
